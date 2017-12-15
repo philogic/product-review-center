@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171214184334) do
+ActiveRecord::Schema.define(version: 20171215002906) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -35,4 +35,39 @@ ActiveRecord::Schema.define(version: 20171214184334) do
     t.index ["reset_password_token"], name: "index_customers_on_reset_password_token", unique: true, using: :btree
   end
 
+  create_table "issues", force: :cascade do |t|
+    t.integer  "customer_id"
+    t.integer  "product_id"
+    t.string   "severity"
+    t.string   "status"
+    t.text     "coment"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.index ["customer_id"], name: "index_issues_on_customer_id", using: :btree
+    t.index ["product_id"], name: "index_issues_on_product_id", using: :btree
+  end
+
+  create_table "products", force: :cascade do |t|
+    t.string   "name"
+    t.string   "code"
+    t.string   "category"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.integer  "customer_id"
+    t.integer  "product_id"
+    t.integer  "rating"
+    t.text     "comment"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.index ["customer_id"], name: "index_reviews_on_customer_id", using: :btree
+    t.index ["product_id"], name: "index_reviews_on_product_id", using: :btree
+  end
+
+  add_foreign_key "issues", "customers"
+  add_foreign_key "issues", "products"
+  add_foreign_key "reviews", "customers"
+  add_foreign_key "reviews", "products"
 end
