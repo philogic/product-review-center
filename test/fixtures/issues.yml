@@ -5,11 +5,11 @@ one:
   product: one
   severity: MyString
   status: MyString
-  coment: MyText
+  comment: MyText
 
 two:
   customer: two
   product: two
   severity: MyString
   status: MyString
-  coment: MyText
+  comment: MyText

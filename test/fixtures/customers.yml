@@ -4,18 +4,25 @@ anne:
   first_name: Anne
   last_name: Smith
   username: esmeralde
+  email: anne@example.com
 
 jakub:
   first_name: Jakub
   last_name: Oblizajek
   username: philogic
+  email: jakub@example.com
+
 
 peter:
   first_name: Peter
   last_name:
   username: justpete
+  email: peter@example.com
+
 
 margaret:
   first_name: Margaret
   last_name: Philson
   username: philogic
+  email: margaret@example.com
+
