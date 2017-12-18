@@ -5,7 +5,7 @@ class CreateIssues < ActiveRecord::Migration[5.0]
       t.references :product, foreign_key: true
       t.string :severity
       t.string :status
-      t.text :coment
+      t.text :comment
 
       t.timestamps
     end
