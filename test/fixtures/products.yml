@@ -1,11 +1,21 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  name: MyString
-  code: MyString
-  category: MyString
+backgammon:
+  name: Backgammon 2014
+  code: BG14
+  category: board
 
-two:
-  name: MyString
-  code: MyString
-  category: MyString
+monopoly:
+  name: Monopoly
+  code: MNPL
+  category: board
+
+duke:
+  name: Duke Cook
+  code: DKCK
+  category: shooter
+
+stratego:
+  name: Stratego 2015
+  code: ST15
+  category: board

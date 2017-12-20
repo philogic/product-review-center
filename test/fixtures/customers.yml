@@ -26,3 +26,8 @@ margaret:
   username: philogic
   email: margaret@example.com
 
+paul:
+  first_name: Paul
+  last_name: White
+  username: pwhite
+  email: paul@example.com
