@@ -12,7 +12,7 @@ ActiveRecord::Base.transaction do
                           email: 'jakub@example.com', password: 'anypassword')
   peter = Customer.create(first_name: 'Peter', last_name: 'Black', username: 'pblack',
                           email: 'peter@example.com', password: 'anypassword')
-  patricia = Customer.create(first_name: 'Patricia', last_name: 'Churchland', username: 'philogic',
+  patricia = Customer.create(first_name: 'Patricia', last_name: 'Churchland', username: 'chland',
                           email: 'patricia@example.com', password: 'anypassword')
 
   #...some products
@@ -30,6 +30,6 @@ ActiveRecord::Base.transaction do
   #...finally let's put some issues
 
   Issue.create(customer: patricia, product: zombies, severity: 'cosmetic', comment: 'Pixelation at the top corner of the screen')
-  Issue.create(customer: peter, product: larry, severity: 'minor', comment: 'I can not open door at lvel 4!')
+  Issue.create(customer: peter, product: larry, severity: 'major', comment: 'I can not open door at level 4!')
 
 end

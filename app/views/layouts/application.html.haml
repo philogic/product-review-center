@@ -8,5 +8,5 @@
     %p.alert= alert
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
-  %body
+  %body{class: controller.controller_name}
     = yield

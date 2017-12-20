@@ -1,2 +1,39 @@
-%h1 Home#index
-%p Find me in app/views/home/index.html.haml
+%h1 Reviews Center
+%table
+  %tbody
+    - @products.each do |product|
+      %tr{:class => "#{cycle('odd_line', 'even_line')}"}
+        %td
+          = image_tag("#{product.code}.jpg", alt: "#{product.name}", class: 'product_image')
+        %td.product_description
+          %dl
+            %dt= product.name
+            %dt= product.category
+        %td
+          %table.paddingColumns
+            %tr
+              %th Reviews
+              %th Issues
+            %tr
+              %td
+                - product.average_rating.times do
+                  = image_tag('heart.png', alt: 'heart', class: 'rating_image')
+              %td
+                - issue_rating(product.issue_count).times do
+                  = image_tag('warning.png', alt: 'warning', class: 'rating_image')
+            %tr
+              %td
+                = link_to 'see all Reviews', product_reviews_path(product)
+              %td
+                = link_to 'See all Issues', product_issues_path(product)
+            %tr
+              %td
+                = link_to 'Add a Review', new_product_review_path(product)
+              %td
+                = link_to 'Report an Issue',new_product_issue_path(product)
+        %td
+        %td.product_actions
+          = link_to 'Edit', edit_product_path(product)
+          = link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' }
+%br/
+= link_to'New Product', new_product_path, error: "Flash message"
