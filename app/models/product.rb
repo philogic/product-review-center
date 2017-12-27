@@ -15,9 +15,9 @@ class Product < ApplicationRecord
   end
 
   def issue_count
-    list = issues.map{|issue| issue.severity}
+    list = issues.map{|i| i.severity}
     count = Hash.new(0)
-    list.each {|issue| count[issue] += 1}
+    list.each {|i| count[i] += 1}
     count
   end
 end

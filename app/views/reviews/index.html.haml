@@ -1,0 +1,29 @@
+%h1 Listing reviews for
+= @product.name
+
+%p= image_tag("#{@product.code}.jpg", alt: "#{@product.name}", class: 'product_image_index')
+
+%table
+  %thead
+    %tr
+      %th{colspan: 10}
+
+  %tbody
+    %tr
+      %th Rating
+      %th Comments
+      %th Options
+    - @reviews.each do |review|
+      %tr
+        %td= review.rating
+        %td= review.comment
+        %td= link_to 'Show', product_review_path(review.product, review)
+        - if current_customer.id == review.customer.id
+          %td= link_to 'Edit', edit_product_review_path(review.product, review)
+          %td= link_to 'Destroy', [review.product, review], method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Review', new_product_review_path
+%span.action_4
+  = link_to 'Back to products', root_path

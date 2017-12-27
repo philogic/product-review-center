@@ -10,3 +10,4 @@
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body{class: controller.controller_name}
     = yield
+    = link_to 'Log Out', destroy_customer_session_path, method: :delete

@@ -1,0 +1,17 @@
+= form_for ([@review.product, @review]) do |f|
+  - if @review.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@review.errors.count, "error")} prohibited this review from being saved:"
+      %ul
+        - @review.errors.full_messages.each do |message|
+          %li= message
+
+  .field
+    = f.label :rating
+    = f.select :rating, %w(1 2 3 4 5), prompt: '1 - lowest 5 - highest'
+
+  .field
+    = f.label :comment
+    = f.text_area :comment, rows: 10, cols: 50
+  .actions
+    = f.submit 'Save'
