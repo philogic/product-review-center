@@ -1,0 +1,13 @@
+%p
+  %strong Severity:
+  = @issue.severity
+
+%p
+  %strong Comment:
+  = @issue.comment
+
+
+%span.action_1
+  = link_to 'Back', product_issues_path(@issue.product)
+- if current_customer.id == @issue.customer.id
+  = link_to 'Edit', edit_product_issue_path(@issue.product, @issue)
