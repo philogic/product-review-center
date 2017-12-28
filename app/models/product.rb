@@ -10,7 +10,7 @@ class Product < ApplicationRecord
                                     message: '%{value} is not a valid category' }
 
   def average_rating
-    0 if reviews.empty?
+    return 0 if reviews.empty?
     reviews.map{|r| r.rating}.inject(:+)/reviews.size
   end
 
