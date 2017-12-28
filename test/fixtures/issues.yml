@@ -9,7 +9,7 @@ one:
 
 two:
   customer: peter
-  product: monopoly
+  product: duke
   severity: minor
   status: reported
   comment: causes a screen freeze

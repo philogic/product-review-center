@@ -8,7 +8,7 @@ describe ReviewsController do
   end
 
   describe 'Review read methods' do
-    it 'GET index' do
+    it 'GET index of all reviews' do
       get product_reviews_path(@product)
       must_respond_with :success
     end
