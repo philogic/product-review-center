@@ -61,6 +61,7 @@ GEM
       responders
       warden (~> 1.2.3)
     erubis (2.7.0)
+    excon (0.60.0)
     execjs (2.7.0)
     ffi (1.9.18)
     globalid (0.4.1)
@@ -210,6 +211,7 @@ DEPENDENCIES
   byebug
   coffee-rails (~> 4.2)
   devise
+  excon
   haml-rails
   jbuilder (~> 2.5)
   jquery-rails
