@@ -27,11 +27,11 @@ describe Product do
 
   describe 'has issues' do
     it 'monopoly should have many issues' do
-      expect(monopoly.issues.size).must_equal 2
+      expect(monopoly.issues.size).must_equal 1
     end
 
-    it 'duke should have no issues' do
-      expect(duke.issues.size).must_equal 0
+    it 'backgammon should have no issues' do
+      expect(backgammon.issues.size).must_equal 0
     end
   end
 
