@@ -1,2 +1,16 @@
-%h1 Messages#index
-%p Find me in app/views/messages/index.html.haml
+%h1
+  Messages for:
+  = @mailbox
+
+%table
+  %thead
+    %tr
+      %th From
+      %th Content
+
+
+  %tbody
+    - @messages.each do |msg|
+      %tr
+        %td= msg['originator']
+        %td= msg['content']

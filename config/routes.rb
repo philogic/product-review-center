@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
-  resources :messages, only: [:index, :new, :create]
+  get 'messages/index'
+  get 'messages/new'
+  post 'messages/create'
   root to: "home#index"
   devise_for :customers, controllers: { registrations: 'registrations' }
   resources :products do

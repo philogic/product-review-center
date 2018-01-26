@@ -1,2 +1,9 @@
-%h1 Messages#show
-%p Find me in app/views/messages/show.html.haml
+%p
+  %h6 Recipient:
+  = @message.fetch(:recipient)
+
+%p
+  %h5 Content:
+  = @message.fetch(:content)
+
+= link_to 'Back', root_path
