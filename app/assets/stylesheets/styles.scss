@@ -81,9 +81,32 @@
     from {color: green;}
     to {color: black;}
   }
+
+
 }
 
 .reviews {
+
+  .action_1 {
+    margin-left: 10px;
+  }
+  .action_2 {
+    margin-left: 10px;
+  }
+  .action_3 {
+    margin-left: 100px;
+  }
+  .action_4 {
+    margin-left: 150px;
+  }
+
+  .product_image_index {
+    width:  120px;
+    height: 140px;
+  }
+}
+
+.issues {
 
   .action_1 {
     margin-left: 10px;

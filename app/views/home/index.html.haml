@@ -1,4 +1,11 @@
-%h1 Reviews Center
+%h1 Products Center
+
+%div.half_line
+  %p.to_left
+    Logged in as:
+    = current_customer.username
+    %span#review_notification.to_right.flash
+
 %table
   %tbody
     - @products.each do |product|
